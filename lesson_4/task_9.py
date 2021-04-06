@@ -1,5 +1,9 @@
 s = input('Введите строку: ')
 ch = input('Введите символ: ')
-for i in range(len(s)-1):
-    if s[i] == ch:
-        print(i, end=' ')
+k = 0
+for i in s:
+    v = s.find(i, k)
+    if i == ch:
+        print(v, end=' ')
+    k += 1
+
