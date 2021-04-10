@@ -6,7 +6,8 @@ print(lst)
 X = int(input('Введите рост Пети: '))
 for i in range(len(lst)):
     if X > lst[i]:
-        print(i)
+        print(i+1)
         break
 else:
-    print(len(lst))
+    print(len(lst)+1)
+
