@@ -1,10 +1,11 @@
 
 file1 = open('src_14.txt', encoding='utf-8')
 lst = []
-file2 = open('task_28.txt', 'w')
 for line in file1:
     lst.append(line.strip('\n').split())
+file1.close()
 
+file2 = open('task_28.txt', 'w')
 average_student = 0
 average_class = 0
 for line in lst:
@@ -18,3 +19,4 @@ for line in lst:
     if average_student < 5:
         print('{:21}'.format(str(line[0])+' ' + str(line[1]) + ' ') + str(average_student))
 print('Средний бал класса: ', round(average_class / len(lst), 2))
+file2.close()
